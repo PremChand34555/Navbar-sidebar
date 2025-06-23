@@ -1,0 +1,141 @@
+/* Custom CSS styles to enhance the UI */
+
+/* Smooth transitions for theme changes */
+:root {
+    --transition-speed: 300ms;
+}
+
+* {
+    transition: background-color var(--transition-speed) ease, 
+                border-color var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+}
+
+/* Sidebar transition */
+#sidebar {
+    transition: transform var(--transition-speed) ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+}
+
+.dark button:focus-visible, 
+.dark a:focus-visible, 
+.dark input:focus-visible {
+    outline: 2px solid #60A5FA;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    cursor: pointer;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+/* Animation for dark mode toggle */
+.color-transition-active * {
+    transition-duration: 800ms;
+}
+
+/* Card hover effect */
+.hover\:shadow-lg:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ripple effect for buttons */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.dark .ripple:after {
+    background-image: radial-gradient(circle, #333 10%, transparent 10.01%);
+}
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .md\:ml-64 {
+        margin-left: 0;
+    }
+}
+
+/* Improved accessibility for dark mode */
+.dark text-gray-800 {
+    color: #e5e7eb;
+}
+
+/* Improved focus for navigation items */
+nav a:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Smooth page transitions */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 
