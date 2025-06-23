@@ -83,6 +83,12 @@ A modern, responsive navigation system featuring both a navbar and sidebar with 
 └─────────────────────────────┘
 ```
 
+
+![image](https://github.com/user-attachments/assets/43c9f278-a61a-4308-b1ab-2343fb0ea7e7)
+![image](https://github.com/user-attachments/assets/c19f3a55-9cda-47a2-b947-8fa46c97d898)
+
+
+
 ### Features Showcase
 
 - **Responsive Layout**: The sidebar automatically collapses on mobile devices and can be toggled with the menu button
